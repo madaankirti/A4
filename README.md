@@ -17,7 +17,39 @@
 - Use of advanced or additional routing metrics
 ## Design Decisions  
 ### Algorithm Implementation Choices:
-#### DVR Implementation:
+#### 1. DVR Implementation:
 - Used Bellman-Ford algorithm for its simplicity in distributed environments
 - Chose to update all nodes simultaneously in each iteration (simulating parallel updates)
 - Maintained separate distance and nextHop tables for clarity
+#### 2. LSR Implementation:
+- Implemented Dijkstra's algorithm using priority queue (O(E + V log V) for efficiency
+- Used a trace-back method to determine next hops from predecessor array
+- Processed each node as source sequentially (rather than simulating flooding)
+### Data Structure Choices:
+- Used vectors for adjacency matrix storage (simple, cache-friendly)
+- Used priority queue for Dijkstra's to efficiently get minimum distance nodes
+- Maintained separate tables for distances and next hops for clarity
+## Implementation
+### High-Level Function Overview
+#### `simulateDVR()`
+- Initializes **distance** and **nextHop** tables for each node.
+- Iteratively updates tables using the **Bellman-Ford equation**
+- Continues updating until no more changes occur (**convergence** reached).
+- Prints DVR tables after each iteration for clarity.
+#### `simulateLSR()`
+- For **each node as a source**:
+- Runs **Dijkstra's algorithm** with a **priority queue** for efficiency.
+- Maintains `distance[]` and `predecessor[]` arrays.
+- Uses trace-back from predecessors to determine **next hops**.
+- Prints **final routing tables** once completed.
+### Helper Functions
+####  `printDVRTable()`
+- Formats and displays the **Distance Vector Routing (DVR)** table for each node.
+- Shows both **cost** and **next hop** information.
+#### `printLSRTable()`
+- Formats and displays the **Link State Routing (LSR)** table.
+- Shows the **shortest path cost** and **corresponding next hop** for each destination.
+#### `readGraphFromFile()`
+- Reads the **adjacency matrix** from an external `.txt` file.
+- Parses the file into a 2D `vector<vector<int>>` used for graph representation.
+
