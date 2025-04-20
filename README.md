@@ -64,3 +64,37 @@
 | Amandeep | 33%              | Designed DVR & LSR simulation logic |
 | Kirti | 33%              | Handled file I/O, DVR table display |
 | Suhail | 33%              | Testing, documentation, and cleanup |
+## Testing
+### Correctness Testing
+- Verified against hand-calculated examples from networking textbooks.
+- Tested with various network topologies (fully connected, star, linear).
+- Confirmed correct handling of unreachable nodes (`INF = 9999`).
+- Checked proper convergence behavior in DVR.
+- Ensured shortest paths in LSR matched Dijkstra’s expected results.
+### Stress Testing
+- Successfully tested with larger graphs (up to 100 nodes).
+- Verified performance across different graph densities.
+- Checked memory usage for large adjacency matrices.
+##  Restrictions
+-  Maximum network size limited by system memory (practically up to 1000 nodes).
+-  All link costs must be **non-negative integers**.
+-  Input file must be **properly formatted** (adjacency matrix).
+-  No dynamic topology changes supported during simulation.
+## Challenges
+### DVR Convergence
+- Initially faced issues detecting convergence correctly.
+- Resolved by tracking update flags across all nodes after each iteration.
+### LSR Next Hop Calculation
+- Tricky part: Determining immediate next hop from Dijkstra’s predecessor array.
+- Solved by implementing a trace-back method from each destination to the source.
+### Input Handling
+- Required robust error handling for malformed input files.
+- Implemented proper error checking for file I/O operations.
+## Sources Referred
+- _Computer Networking: A Top-Down Approach_ by Kurose & Ross
+- [Dijkstra’s Algorithm – Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+- [Bellman-Ford Algorithm – GeeksforGeeks](https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/)
+- C++ STL documentation for `priority_queue`
+## Declaration
+> We declare that this assignment represents my own work and we have not engaged in any form of plagiarism.  
+> All code and documentation was written by us except where explicitly cited.
