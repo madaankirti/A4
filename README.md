@@ -53,24 +53,12 @@
 - Reads the **adjacency matrix** from an external `.txt` file.
 - Parses the file into a 2D `vector<vector<int>>` used for graph representation.
 ### Code Flow Diagram
-
 ```mermaid
 graph TD
     A[Start: Main Function] --> B[Read input graph from file]
     B --> C{Choose Routing Algorithm}
     C --> D[Run simulateDVR()]
     C --> E[Run simulateLSR()]
-
-    D --> D1[Initialize tables]
-    D1 --> D2[Iterative updates using Bellman-Ford]
-    D2 --> D3[Check convergence]
-    D3 --> D4[Print DVR tables]
-
-    E --> E1[For each node: Run Dijkstra's algorithm]
-    E1 --> E2[Trace paths using predecessor array]
-    E2 --> E3[Determine next hops]
-    E3 --> E4[Print LSR tables]
-
 ```
 ## Contribution of Each Member
 | Member | Contribution (%) | Tasks Handled |
