@@ -53,7 +53,6 @@
 - Reads the **adjacency matrix** from an external `.txt` file.
 - Parses the file into a 2D `vector<vector<int>>` used for graph representation.
 ### Code Flow Diagram
-### Code Flow Diagram
 1. Read input graph from file
 2. Run DVR simulation:
  --Initialize tables → Iterative updates → Convergence check → Print results
