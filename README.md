@@ -52,8 +52,17 @@
 #### `readGraphFromFile()`
 - Reads the **adjacency matrix** from an external `.txt` file.
 - Parses the file into a 2D `vector<vector<int>>` used for graph representation.
-## 👥 Contribution of Each Member
+## Code Flow
+```mermaid
+graph TD
+    A[Main Function] --> B[readGraphFromFile()]
+    B --> C{Routing Algorithm?}
+    C --> D[simulateDVR()]
+    C --> E[simulateLSR()]
+    D --> F[printDVRTable()]
+    E --> G[printLSRTable()]
 
+## Contribution of Each Member
 | Member | Contribution (%) | Tasks Handled |
 |--------|------------------|----------------|
 | Amandeep | 33%              | Designed DVR & LSR simulation logic |
