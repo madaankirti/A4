@@ -96,5 +96,5 @@
 - [Bellman-Ford Algorithm – GeeksforGeeks](https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/)
 - C++ STL documentation for `priority_queue`
 ## Declaration
-> We declare that this assignment represents my own work and we have not engaged in any form of plagiarism.  
+> We declare that this assignment represents our own work and we have not engaged in any form of plagiarism.  
 > All code and documentation was written by us except where explicitly cited.
