@@ -52,4 +52,10 @@
 #### `readGraphFromFile()`
 - Reads the **adjacency matrix** from an external `.txt` file.
 - Parses the file into a 2D `vector<vector<int>>` used for graph representation.
+## 👥 Contribution of Each Member
 
+| Member | Contribution (%) | Tasks Handled |
+|--------|------------------|----------------|
+| Amandeep | 33%              | Designed DVR & LSR simulation logic |
+| Kirti | 33%              | Handled file I/O, DVR table display |
+| Suhail | 33%              | Testing, documentation, and cleanup |
