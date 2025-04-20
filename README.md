@@ -61,7 +61,7 @@ graph TD
     C --> E[simulateLSR()]
     D --> F[printDVRTable()]
     E --> G[printLSRTable()]
-
+```
 ## Contribution of Each Member
 | Member | Contribution (%) | Tasks Handled |
 |--------|------------------|----------------|
