@@ -1,8 +1,8 @@
 # Assignment 4: Distance Vector and Link State Routing Simulation
-## Group Members
-- 1. [Kirti]
-- 2. [Name]
-- 3. [Name]
+**Group Members:**  
+- Amandeep Upadhyay (210114)  
+- Kirti (210522)  
+- Mohammad Suhail Ilyas (210617)
 ## Assignment Features
 ### Features Implemented
 - Complete **Distance Vector Routing (DVR)** algorithm using **Bellman-Ford**
@@ -15,3 +15,9 @@
 - Graphical visualization of the network
 - Support for dynamic topology changes
 - Use of advanced or additional routing metrics
+## Design Decisions  
+### Algorithm Implementation Choices:
+#### DVR Implementation:
+- Used Bellman-Ford algorithm for its simplicity in distributed environments
+- Chose to update all nodes simultaneously in each iteration (simulating parallel updates)
+- Maintained separate distance and nextHop tables for clarity
